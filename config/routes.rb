@@ -54,7 +54,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-  resources: articles
+  resources :articles
   
   root 'welcome#index'
   
