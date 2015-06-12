@@ -28,18 +28,19 @@
 development:
   adapter: mysql2
   database: ruby_lessons_development
-  username: lruby
-  password: lessons
+  username: ruby
+  password: pwdruby
   host: localhost
 test:
   adapter: mysql2
   database: ruby_lessons_test
-  username: lruby
-  password: lessons
+  username: ruby
+  password: pwdruby
   host: localhost
 production:
   adapter: mysql2
   database: ruby_lessons_production
-  username: lruby
-  password: lessons
+  username: ruby
+  password: pwdruby
   host: localhost 
+  
