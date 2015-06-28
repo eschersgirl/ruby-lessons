@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
   # only public methods can be actions for controllers
+  before_action :authenticate_user!
   
   def new
+
   end
   
 # step1/////  
