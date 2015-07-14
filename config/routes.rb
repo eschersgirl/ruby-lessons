@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get 'welcome/index'
+
+  # devise_for :users
+  # devise_for :users, controllers: { sessions: "users/sessions" }
+  devise_for :users, controllers: { sessions: "users/sessions" }, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
+  
+  # devise_scope :user do
+  #   get "sign_in", to: "devise/sessions#new"
+  # end
+  
+  resources :articles
+ 
+  
+  root 'welcome#index'
+  
+  # root to: 'home#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,9 +71,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-  resources :articles
- 
-  
-  root 'welcome#index'
   
 end

@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag "main" %>
+<div class="header">
+	<ul class="nav pull-right">
+	  <li><%= link_to "Home",       root_path %></li>
+	  <% if user_signed_in? %>
+	  <li><%= link_to "Profile", edit_user_registration_path %></li>
+	  <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+	  <% else %>
+	    <li><%= link_to "Sign in", new_user_session_path %></li>
+	  <% end %>
+	</ul>
+</div>
+<br><br>
+
+<h1>
+	Üdv 
+	<% if user_signed_in? %>
+		<%= current_user.username %>
+  	<% else %>
+    	és csatlakozz te is
+  	<% end %>
+</h1>
+
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+<table>
+
+<tr>
+	<td colspan="2">
+		Publikus bor lista - legfrissebb 3
+	</td>
+</tr>
+
+</table>

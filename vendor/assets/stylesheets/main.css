@@ -1,0 +1,39 @@
+.header {
+	height: 30px;
+	display: block;
+	margin: 0;
+	padding: 0 0 15px 0;
+	background-color: #DADADA;
+	border-bottom: 2px solid #666666;
+}
+
+ul.nav {
+	margin: 10px 10px;
+	font-size: 13px;
+	font-weight: bold;
+} 
+
+ul.nav li {
+	padding: 10px;
+	display: block;
+	float: left;
+	width: 170px;
+	/* border: 1px solid red; */
+}
+
+ul.nav li a,  ul.nav li a:visited {
+	color: #730E15;
+}
+
+ul.nav li a:hover {
+	color: #B00100;
+	text-decoration: underline;
+}
+
+.pull-right {
+	float: left;
+}
+
+h1 {
+	clear: both;
+}
