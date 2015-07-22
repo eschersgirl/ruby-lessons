@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150712143236) do
+ActiveRecord::Schema.define(version: 20150722213447) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.text     "text",       limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "filename",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,5 +51,33 @@ ActiveRecord::Schema.define(version: 20150712143236) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
+
+  create_table "users_wine_clubs", id: false, force: :cascade do |t|
+    t.integer "user_id",      limit: 4
+    t.integer "wine_club_id", limit: 4
+  end
+
+  create_table "wine_club_events", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.text     "description", limit: 65535
+    t.string   "address",     limit: 255
+    t.datetime "eventDate"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "wine_clubs", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.text     "text",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "wines", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.text     "text",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
 end

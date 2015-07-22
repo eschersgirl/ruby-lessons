@@ -9,12 +9,27 @@ Rails.application.routes.draw do
   #   get "sign_in", to: "devise/sessions#new"
   # end
   
+  resources "wine-clubs", :controller => :wine_clubs, :as => :wine_clubs
+  
   resources :articles
  
   
   root 'welcome#index'
   
   # root to: 'home#index'
+  
+  ## namespace alatt pl. az admin controllerek lehetnek, egy csoportban, 
+  ## pl. ilyen url/hez: /admin/articles/new , igy kell megadni:
+  ## namespace :admin do
+  ##   resources :articles, :comments
+  ## end
+  ## / vagy, ha ne irja ki az admin modult, akkor:
+  ## scope '/admin' do
+  ##   resources :articles, :comments
+  ## end
+  ## vagy ez utobbi single modban:
+  ## resources :articles, path: '/admin/articles'
+    
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
