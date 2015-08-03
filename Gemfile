@@ -49,3 +49,16 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # User és authentikáció
 gem 'devise'
 
+# debughoz
+# gem 'debugger', '~> 1.6.8'
+# gem 'pry', '~> 0.10.1'
+# gem 'pry-remote', '~> 0.1.8'
+# gem 'pry-debugger', '~> 0.2.3'
+
+
+# jogosultságok szabalyozasahoz
+gem "cancan"
+
+# tabla kapcsolatokhoz, ActiveRecord bovites
+gem "schema_plus"
+

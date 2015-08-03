@@ -7,11 +7,13 @@ class User < ActiveRecord::Base
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
   # attr_accessor :login  
+
+  has_and_belongs_to_many :wineClubs
   
-  has_and_belongs_to_many :wineClubs,
-    :association_foreign_key => 'wine_club_id',
-    :class_name => 'WineClub',
-    :join_table => 'users_wine_clubs'
+  # has_and_belongs_to_many :wineClubs,
+  #   :association_foreign_key => 'wine_club_id',
+  #   :class_name => 'WineClub',
+  #   :join_table => 'users_wine_clubs'
   
 end
 

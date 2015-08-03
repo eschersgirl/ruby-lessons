@@ -13,12 +13,17 @@ class WineClubsController < ApplicationController
     
   def create
     @wine_club = WineClub.new(wine_club_params)
+    # @wine_club.user_id = current_user.id
+    # @wine_club.current_user = current_user
+    # @wine_club = current_user.wine_clubs.build(wine_club_params)
     @wine_club.save
+
+
+    wineClubId = @wine_club.id
+    userId = current_user.id
+
     
-    # wineClubId = @wine_club.id
-    # userId = current_user.id
-    # UsersWineClubs.create(user_id: userId, wine_club_id: wineClubId)
-    
+
     redirect_to root_path
 
   end
