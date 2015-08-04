@@ -26,12 +26,33 @@
 <table>
 <tr>
 	<td colspan="2">
+		<br>
 		<%= link_to "Új borklub létrehozásához kattint ide!", new_wine_club_path %>
+		<br><br>
 	</td>
 </tr>
 <tr>
 	<td colspan="2">
-		Borklubjaim listája
+		Borklubjaim listája<br><br>
+
+		<table>
+			<thead>
+				<tr>
+					<td>Borklub id</td>
+					<td>Borklub neve</td>
+				</tr>
+			</thead>
+			<tbody>
+				<% @usersWineClubs.each do |p| %>
+				<% p.addresses.each do |wineClubs| %>
+				<tr>
+					<td><%= wineClubs.id %></td>
+					<td><%= wineClubs.name %></td>
+				</tr>
+				<% end %>
+				<% end %>
+			</tbody>
+		</table>
 	</td>
 </tr>
 

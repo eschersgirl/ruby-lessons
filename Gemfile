@@ -62,3 +62,8 @@ gem "cancan"
 # tabla kapcsolatokhoz, ActiveRecord bovites
 gem "schema_plus"
 
+# form kezeleshez
+gem 'simple_form'
+
+# country select
+gem 'country_select'

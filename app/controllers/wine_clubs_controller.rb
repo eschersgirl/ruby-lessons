@@ -16,6 +16,7 @@ class WineClubsController < ApplicationController
     # @wine_club.user_id = current_user.id
     # @wine_club.current_user = current_user
     # @wine_club = current_user.wine_clubs.build(wine_club_params)
+
     @wine_club.save
 
 

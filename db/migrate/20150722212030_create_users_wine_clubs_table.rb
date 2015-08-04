@@ -5,12 +5,13 @@ class CreateUsersWineClubsTable < ActiveRecord::Migration
       uwc.integer :wine_club_id
       # uwc.references :user
       # uwc.references :wine_club
+
     end
   end
   
-  def self.down
-    drop_table :users_wine_clubs_tables
-  end
+  # def self.down
+  #   drop_table :users_wine_clubs_tables
+  # end
 
 
 end
