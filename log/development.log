@@ -8029,3 +8029,831 @@ ActiveRecord::RecordNotFound (Couldn't find User with 'id'=all):
   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (136.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:10:34 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 9ms (ActiveRecord: 2.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=all):
+  app/controllers/welcome_controller.rb:6:in `index'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (140.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:11:02 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 20.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    43: 				</tr>
+    44: 			</thead>
+    45: 			<tbody>
+    46: 				<% @usersWineClubs.each do |p| %>
+    47: 				<% p.addresses.each do |wineClubs| %>
+    48: 				<tr>
+    49: 					<td><%= wineClubs.id %></td>
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb__883170686_112777280'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (130.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (170.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:12:22 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 160ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/wine_clubs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/wine_clubs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/assets/main.self-5e9f2fe600e3b2120270a388464749e87360ad5ae077c7f54213d663dcbbe69a.css?body=1" for ::1 at 2015-08-04 10:12:22 +0200
+
+
+Started GET "/wine-clubs/new" for ::1 at 2015-08-04 10:14:46 +0200
+Processing by WineClubsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered wine_clubs/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 159ms (Views: 154.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (20.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35m (10.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (10.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `articles`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `photos`
+  [1m[36m (10.0ms)[0m  [1mSHOW CREATE TABLE `schema_migrations`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `users_wine_clubs`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `wine_club_events`
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `wine_clubs`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `wines`
+  [1m[36m (10.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `articles`
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `photos`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `users_wine_clubs`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `wine_club_events`
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `wine_clubs`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `wines`
+  [1m[36m (10.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[36m (7.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36m (7.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mWineClub Load (1.0ms)[0m  SELECT  `wine_clubs`.* FROM `wine_clubs`  ORDER BY `wine_clubs`.`id` DESC LIMIT 1
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT  `wine_clubs`.* FROM `wine_clubs`  ORDER BY `wine_clubs`.`id` DESC LIMIT 1[0m
+  [1m[35mUser Load (33.0ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `users_wine_clubs` ON `users`.`id` = `users_wine_clubs`.`user_id` WHERE `users_wine_clubs`.`wine_club_id` = 16
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT  `wine_clubs`.* FROM `wine_clubs`  ORDER BY `wine_clubs`.`id` DESC LIMIT 1[0m
+  [1m[35m (88.0ms)[0m  SELECT COUNT(*) FROM `users` INNER JOIN `users_wine_clubs` ON `users`.`id` = `users_wine_clubs`.`user_id` WHERE `users_wine_clubs`.`wine_club_id` = 16
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35m (28.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35mWineClub Load (1.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs` INNER JOIN `users_wine_clubs` ON `wine_clubs`.`id` = `users_wine_clubs`.`wine_club_id` WHERE `users_wine_clubs`.`user_id` = 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `wine_clubs` INNER JOIN `users_wine_clubs` ON `wine_clubs`.`id` = `users_wine_clubs`.`wine_club_id` WHERE `users_wine_clubs`.`user_id` = 1
+
+
+Started GET "/" for ::1 at 2015-08-04 10:39:11 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35m (7.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (NULL, NULL)
+Completed 404 Not Found in 54ms (ActiveRecord: 24.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Users with 'id': (all, {:include=>:wineclubs}) (found 0 results, but was looking for 2)):
+  app/controllers/welcome_controller.rb:7:in `index'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (68.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (146.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:40:33 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36m (8.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 26.0ms)
+
+TypeError (wrong argument type Symbol (expected Module)):
+  app/controllers/welcome_controller.rb:7:in `include'
+  app/controllers/welcome_controller.rb:7:in `index'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (142.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:40:48 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36m (7.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (29.0ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 42.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    43: 				</tr>
+    44: 			</thead>
+    45: 			<tbody>
+    46: 				<% @usersWineClubs.each do |p| %>
+    47: 				<% p.addresses.each do |wineClubs| %>
+    48: 				<tr>
+    49: 					<td><%= wineClubs.id %></td>
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb__883170686_82024220'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (63.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (141.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  [1m[35mHABTM_WineClubs Load (2.0ms)[0m  SELECT `users_wine_clubs`.* FROM `users_wine_clubs` WHERE `users_wine_clubs`.`user_id` IN (1)
+  [1m[36mWineClub Load (22.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs` WHERE `wine_clubs`.`id` IN (1, 3, 7)[0m
+
+
+Started GET "/" for ::1 at 2015-08-04 10:44:49 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36m (7.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 27.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    43: 				</tr>
+    44: 			</thead>
+    45: 			<tbody>
+    46: 				<% @usersWineClubs.each do |p| %>
+    47: 				<% p.addresses.each do |wineClubs| %>
+    48: 				<tr>
+    49: 					<td><%= wineClubs.id %></td>
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb__883170686_82024220'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (145.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE (users.id = 1)
+  [1m[36mHABTM_WineClubs Load (1.0ms)[0m  [1mSELECT `users_wine_clubs`.* FROM `users_wine_clubs` WHERE `users_wine_clubs`.`user_id` IN (1)[0m
+  [1m[35mWineClub Load (1.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs` WHERE `wine_clubs`.`id` IN (1, 3, 7)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:48:27 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36m (10.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (users.id = 1)[0m
+  [1m[35mHABTM_WineClubs Load (0.0ms)[0m  SELECT `users_wine_clubs`.* FROM `users_wine_clubs` WHERE `users_wine_clubs`.`user_id` IN (1)
+  [1m[36mWineClub Load (0.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs` WHERE `wine_clubs`.`id` IN (1, 3, 7)[0m
+  Rendered welcome/index.html.erb within layouts/application (190.0ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 60.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<User:0x0000000d0ef620>):
+    46: 				<% @users_wine_clubs.each do |wineclub| %>
+    47: 				<tr>
+    48: 					<td><%= wineclub.id %></td>
+    49: 					<td><%= wineclub.name %></td>
+    50: 				</tr>
+    51: 				<% end %>
+    52: 			</tbody>
+  app/views/welcome/index.html.erb:49:in `block in _app_views_welcome_index_html_erb__883170686_100942480'
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb__883170686_100942480'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (70.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (130.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:50:52 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (10.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (users.id = 1)[0m
+  [1m[35mHABTM_WineClubs Load (0.0ms)[0m  SELECT `users_wine_clubs`.* FROM `users_wine_clubs` WHERE `users_wine_clubs`.`user_id` IN (1)
+  [1m[36mWineClub Load (0.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs` WHERE `wine_clubs`.`id` IN (1, 3, 7)[0m
+  Rendered welcome/index.html.erb within layouts/application (42.0ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 10.0ms)
+
+ActionView::Template::Error (undefined method `text' for #<User:0x0000000c04a1d0>):
+    46: 				<% @users_wine_clubs.each do |wineclub| %>
+    47: 				<tr>
+    48: 					<td><%= wineclub.id %></td>
+    49: 					<td><%= wineclub.text %></td>
+    50: 				</tr>
+    51: 				<% end %>
+    52: 			</tbody>
+  app/views/welcome/index.html.erb:49:in `block in _app_views_welcome_index_html_erb__883170686_99316460'
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb__883170686_99316460'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (130.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:51:13 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35m (10.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 20.0ms)
+
+NameError (uninitialized constant WelcomeController::WineClubs):
+  app/controllers/welcome_controller.rb:7:in `index'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (70.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (140.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:51:29 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35m (10.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mWineClub Load (0.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)
+Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)
+  Rendered welcome/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 30.0ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)):
+    43: 				</tr>
+    44: 			</thead>
+    45: 			<tbody>
+    46: 				<% @users_wine_clubs.each do |wineclub| %>
+    47: 				<tr>
+    48: 					<td><%= wineclub.id %></td>
+    49: 					<td><%= wineclub.text %></td>
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb__883170686_99316460'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (130.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (180.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 10:52:06 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mUser Load (10.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mWineClub Load (10.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)[0m
+Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)
+  Rendered welcome/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 120.0ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)):
+    43: 				</tr>
+    44: 			</thead>
+    45: 			<tbody>
+    46: 				<% @users_wine_clubs.each do |wineclub| %>
+    47: 				<tr>
+    48: 					<td><%= wineclub.id %></td>
+    49: 					<td><%= wineclub.text %></td>
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb__883170686_99316460'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (89.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (71.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (144.0ms)
+  [1m[36mWineClub Load (0.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs`[0m
+  [1m[35mHABTM_Users Load (0.0ms)[0m  SELECT `users_wine_clubs`.* FROM `users_wine_clubs` WHERE `users_wine_clubs`.`wine_club_id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1)[0m
+  [1m[35mWineClub Load (0.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id=1)
+Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id=1)
+
+
+Started GET "/" for ::1 at 2015-08-04 11:00:13 +0200
+  [1m[36m (20.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by WelcomeController#index as HTML
+  [1m[36m (10.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mWineClub Load (0.0ms)[0m  [1mSELECT  `wine_clubs`.* FROM `wine_clubs`  ORDER BY `wine_clubs`.`id` DESC LIMIT 1[0m
+  [1m[35mWineClub Load (10.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)
+Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)
+  Rendered welcome/index.html.erb within layouts/application (290.0ms)
+Completed 500 Internal Server Error in 131574ms (ActiveRecord: 110.0ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)):
+    43: 				</tr>
+    44: 			</thead>
+    45: 			<tbody>
+    46: 				<% @users_wine_clubs.each do |wineclub| %>
+    47: 				<tr>
+    48: 					<td><%= wineclub.id %></td>
+    49: 					<td><%= wineclub.text %></td>
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb___967959038_46412000'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (90.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (390.0ms)
+  [1m[36m (31.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mActiveRecord::SchemaMigration Load (26.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for ::1 at 2015-08-04 23:40:41 +0200
+  [1m[36m (14.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by WelcomeController#index as HTML
+  [1m[36m (7.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mWineClub Load (41.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)[0m
+Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)
+  Rendered welcome/index.html.erb within layouts/application (422.0ms)
+Completed 500 Internal Server Error in 867ms (ActiveRecord: 101.0ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)):
+    43: 				</tr>
+    44: 			</thead>
+    45: 			<tbody>
+    46: 				<% @users_wine_clubs.each do |wineclub| %>
+    47: 				<tr>
+    48: 					<td><%= wineclub.id %></td>
+    49: 					<td><%= wineclub.text %></td>
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb__1212942627_87925840'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (208.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (122.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (429.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-04 23:42:16 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35m (6.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mWineClub Load (2.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)
+Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)
+  Rendered welcome/index.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 100.0ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)):
+    43: 				</tr>
+    44: 			</thead>
+    45: 			<tbody>
+    46: 				<% @users_wine_clubs.each do |wineclub| %>
+    47: 				<tr>
+    48: 					<td><%= wineclub.id %></td>
+    49: 					<td><%= wineclub.text %></td>
+  app/views/welcome/index.html.erb:46:in `_app_views_welcome_index_html_erb__1212942627_87925840'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (62.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (137.0ms)
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs`[0m
+  [1m[35mWineClub Load (0.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs`
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs`[0m
+  [1m[35mWineClub Load (1.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs`
+  [1m[36m (10.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35m (6.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (6.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (6.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `articles`[0m
+  [1m[35m (1.0ms)[0m  SHOW CREATE TABLE `photos`
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `schema_migrations`[0m
+  [1m[35m (1.0ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36m (1.0ms)[0m  [1mSHOW CREATE TABLE `users_wine_clubs`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `wine_club_events`
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `wine_clubs`[0m
+  [1m[35m (1.0ms)[0m  SHOW CREATE TABLE `wines`
+  [1m[36m (7.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `articles`
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `photos`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36m (1.0ms)[0m  [1mSHOW CREATE TABLE `users_wine_clubs`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `wine_club_events`
+  [1m[36m (1.0ms)[0m  [1mSHOW CREATE TABLE `wine_clubs`[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `wines`
+  [1m[36m (6.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[36m (7.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs`[0m
+  [1m[35mWineClub Load (1.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs`
+  [1m[36mWineClub Load (0.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs`[0m
+  [1m[35mWineClub Load (0.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs`
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs`[0m
+  [1m[35mWineClub Load (1.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs`
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs`[0m
+  [1m[35mHABTM_Users Load (131.0ms)[0m  SELECT `users_wine_clubs`.* FROM `users_wine_clubs` WHERE `users_wine_clubs`.`wine_club_id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1)[0m
+  [1m[35mWineClub Load (1.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (user.id = 1)
+Mysql2::Error: Unknown column 'user.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (user.id = 1)
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)[0m
+Mysql2::Error: Unknown column 'users.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (users.id = 1)
+  [1m[35mWineClub Load (1.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (id = 1)
+  [1m[36mHABTM_Users Load (0.0ms)[0m  [1mSELECT `users_wine_clubs`.* FROM `users_wine_clubs` WHERE `users_wine_clubs`.`wine_club_id` IN (1)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1)
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs` WHERE (ïusersï.ïidï = 1)[0m
+Mysql2::Error: Unknown column 'Â´usersÂ´.Â´idÂ´' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (ïusersï.ïidï = 1)
+  [1m[35mWineClub Load (1.0ms)[0m  SELECT `wine_clubs`.* FROM `wine_clubs` WHERE ('users'.'id' = 1)
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.'id' = 1)' at line 1: SELECT `wine_clubs`.* FROM `wine_clubs` WHERE ('users'.'id' = 1)
+  [1m[36mWineClub Load (1.0ms)[0m  [1mSELECT `wine_clubs`.* FROM `wine_clubs` WHERE (user.id = 1)[0m
+Mysql2::Error: Unknown column 'user.id' in 'where clause': SELECT `wine_clubs`.* FROM `wine_clubs` WHERE (user.id = 1)
+  [1m[36m (9.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mSQL (18.0ms)[0m  SELECT `wine_clubs`.`id` AS t0_r0, `wine_clubs`.`title` AS t0_r1, `wine_clubs`.`text` AS t0_r2, `wine_clubs`.`created_at` AS t0_r3, `wine_clubs`.`updated_at` AS t0_r4, `users`.`id` AS t1_r0, `users`.`email` AS t1_r1, `users`.`encrypted_password` AS t1_r2, `users`.`reset_password_token` AS t1_r3, `users`.`reset_password_sent_at` AS t1_r4, `users`.`remember_created_at` AS t1_r5, `users`.`sign_in_count` AS t1_r6, `users`.`current_sign_in_at` AS t1_r7, `users`.`last_sign_in_at` AS t1_r8, `users`.`current_sign_in_ip` AS t1_r9, `users`.`last_sign_in_ip` AS t1_r10, `users`.`confirmation_token` AS t1_r11, `users`.`confirmed_at` AS t1_r12, `users`.`confirmation_sent_at` AS t1_r13, `users`.`unconfirmed_email` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16, `users`.`username` AS t1_r17 FROM `wine_clubs` LEFT OUTER JOIN `users_wine_clubs` ON `users_wine_clubs`.`wine_club_id` = `wine_clubs`.`id` LEFT OUTER JOIN `users` ON `users`.`id` = `users_wine_clubs`.`user_id` WHERE `users`.`id` = 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT `wine_clubs`.`id` AS t0_r0, `wine_clubs`.`title` AS t0_r1, `wine_clubs`.`text` AS t0_r2, `wine_clubs`.`created_at` AS t0_r3, `wine_clubs`.`updated_at` AS t0_r4, `users`.`id` AS t1_r0, `users`.`email` AS t1_r1, `users`.`encrypted_password` AS t1_r2, `users`.`reset_password_token` AS t1_r3, `users`.`reset_password_sent_at` AS t1_r4, `users`.`remember_created_at` AS t1_r5, `users`.`sign_in_count` AS t1_r6, `users`.`current_sign_in_at` AS t1_r7, `users`.`last_sign_in_at` AS t1_r8, `users`.`current_sign_in_ip` AS t1_r9, `users`.`last_sign_in_ip` AS t1_r10, `users`.`confirmation_token` AS t1_r11, `users`.`confirmed_at` AS t1_r12, `users`.`confirmation_sent_at` AS t1_r13, `users`.`unconfirmed_email` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16, `users`.`username` AS t1_r17 FROM `wine_clubs` LEFT OUTER JOIN `users_wine_clubs` ON `users_wine_clubs`.`wine_club_id` = `wine_clubs`.`id` LEFT OUTER JOIN `users` ON `users`.`id` = `users_wine_clubs`.`user_id` WHERE `users`.`id` = 1[0m
+
+
+Started GET "/wine-clubs" for ::1 at 2015-08-05 00:36:32 +0200
+
+AbstractController::ActionNotFound (The action 'index' could not be found for WineClubsController):
+  actionpack (4.2.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (67.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (145.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-05 00:36:37 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36m (9.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT `wine_clubs`.`id` AS t0_r0, `wine_clubs`.`title` AS t0_r1, `wine_clubs`.`text` AS t0_r2, `wine_clubs`.`created_at` AS t0_r3, `wine_clubs`.`updated_at` AS t0_r4, `users`.`id` AS t1_r0, `users`.`email` AS t1_r1, `users`.`encrypted_password` AS t1_r2, `users`.`reset_password_token` AS t1_r3, `users`.`reset_password_sent_at` AS t1_r4, `users`.`remember_created_at` AS t1_r5, `users`.`sign_in_count` AS t1_r6, `users`.`current_sign_in_at` AS t1_r7, `users`.`last_sign_in_at` AS t1_r8, `users`.`current_sign_in_ip` AS t1_r9, `users`.`last_sign_in_ip` AS t1_r10, `users`.`confirmation_token` AS t1_r11, `users`.`confirmed_at` AS t1_r12, `users`.`confirmation_sent_at` AS t1_r13, `users`.`unconfirmed_email` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16, `users`.`username` AS t1_r17 FROM `wine_clubs` LEFT OUTER JOIN `users_wine_clubs` ON `users_wine_clubs`.`wine_club_id` = `wine_clubs`.`id` LEFT OUTER JOIN `users` ON `users`.`id` = `users_wine_clubs`.`user_id` WHERE `users`.`id` = 1[0m
+  Rendered welcome/index.html.erb within layouts/application (144.0ms)
+Completed 200 OK in 629ms (Views: 528.0ms | ActiveRecord: 52.0ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-05 00:36:37 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-05 00:36:37 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/assets/main.self-5e9f2fe600e3b2120270a388464749e87360ad5ae077c7f54213d663dcbbe69a.css?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/assets/wine_clubs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/assets/wine_clubs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-05 00:36:38 +0200
+
+
+Started GET "/wine-clubs/new" for ::1 at 2015-08-05 00:36:55 +0200
+Processing by WineClubsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered wine_clubs/new.html.erb within layouts/application (217.0ms)
+Completed 200 OK in 339ms (Views: 335.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/wine-clubs" for ::1 at 2015-08-05 00:37:07 +0200
+Processing by WineClubsController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"4gICHFKnwbAX5VnDt0ye3/mGOVHvDajNYeeO+UJnjMHcL5VrmC/T8GsqYIf/QDNnDPLyiDCG+KVVim9wBF64Qw==", "wine_clubs"=>{"title"=>"hhhh", "text"=>"juuuuuuhhhuuuu"}, "commit"=>"Save Wine clubs"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (42.0ms)[0m  [1mINSERT INTO `wine_clubs` (`title`, `text`, `created_at`, `updated_at`) VALUES ('hhhh', 'juuuuuuhhhuuuu', '2015-08-04 22:37:07', '2015-08-04 22:37:07')[0m
+  [1m[35m (26.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 102ms (ActiveRecord: 69.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-05 00:37:07 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `wine_clubs`.`id` AS t0_r0, `wine_clubs`.`title` AS t0_r1, `wine_clubs`.`text` AS t0_r2, `wine_clubs`.`created_at` AS t0_r3, `wine_clubs`.`updated_at` AS t0_r4, `users`.`id` AS t1_r0, `users`.`email` AS t1_r1, `users`.`encrypted_password` AS t1_r2, `users`.`reset_password_token` AS t1_r3, `users`.`reset_password_sent_at` AS t1_r4, `users`.`remember_created_at` AS t1_r5, `users`.`sign_in_count` AS t1_r6, `users`.`current_sign_in_at` AS t1_r7, `users`.`last_sign_in_at` AS t1_r8, `users`.`current_sign_in_ip` AS t1_r9, `users`.`last_sign_in_ip` AS t1_r10, `users`.`confirmation_token` AS t1_r11, `users`.`confirmed_at` AS t1_r12, `users`.`confirmation_sent_at` AS t1_r13, `users`.`unconfirmed_email` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16, `users`.`username` AS t1_r17 FROM `wine_clubs` LEFT OUTER JOIN `users_wine_clubs` ON `users_wine_clubs`.`wine_club_id` = `wine_clubs`.`id` LEFT OUTER JOIN `users` ON `users`.`id` = `users_wine_clubs`.`user_id` WHERE `users`.`id` = 1
+  Rendered welcome/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 141ms (Views: 137.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/wine-clubs/new" for ::1 at 2015-08-05 00:37:57 +0200
+Processing by WineClubsController#new as HTML
+  [1m[36m (7.0ms)[0m  [1mSELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered wine_clubs/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 170ms (Views: 121.0ms | ActiveRecord: 25.0ms)
+
+
+Started POST "/wine-clubs" for ::1 at 2015-08-05 00:38:03 +0200
+Processing by WineClubsController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"WsbEAN9TJWXkNUXqHHLMm7xJqcJOH76FuypGZPu4GOlk61N3Fds3JZj6fK5UfmEjST1iG5GU7u2PR6ftvYEsaw==", "wine_clubs"=>{"title"=>"www", "text"=>"wtretrretre"}, "commit"=>"Save Wine clubs"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 19.0ms)
+
+NoMethodError (undefined method `user_id=' for #<WineClub:0x00000010451b80>):
+  app/controllers/wine_clubs_controller.rb:16:in `create'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (62.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (135.0ms)
+
+
+Started POST "/wine-clubs" for ::1 at 2015-08-05 00:46:26 +0200
+Processing by WineClubsController#create as HTML
+  Parameters: {"utf8"=>"âœ“", "authenticity_token"=>"WsbEAN9TJWXkNUXqHHLMm7xJqcJOH76FuypGZPu4GOlk61N3Fds3JZj6fK5UfmEjST1iG5GU7u2PR6ftvYEsaw==", "wine_clubs"=>{"title"=>"www", "text"=>"wtretrretre"}, "commit"=>"Save Wine clubs"}
+  [1m[35m (6.0ms)[0m  SELECT table_name FROM information_schema.views WHERE table_schema = SCHEMA()
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `wine_clubs` (`title`, `text`, `created_at`, `updated_at`) VALUES ('www', 'wtretrretre', '2015-08-04 22:46:27', '2015-08-04 22:46:27')[0m
+  [1m[35mSQL (16.0ms)[0m  INSERT INTO `users_wine_clubs` (`user_id`, `wine_club_id`) VALUES (1, 18)
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 332ms (ActiveRecord: 152.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-05 00:46:27 +0200
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT `wine_clubs`.`id` AS t0_r0, `wine_clubs`.`title` AS t0_r1, `wine_clubs`.`text` AS t0_r2, `wine_clubs`.`created_at` AS t0_r3, `wine_clubs`.`updated_at` AS t0_r4, `users`.`id` AS t1_r0, `users`.`email` AS t1_r1, `users`.`encrypted_password` AS t1_r2, `users`.`reset_password_token` AS t1_r3, `users`.`reset_password_sent_at` AS t1_r4, `users`.`remember_created_at` AS t1_r5, `users`.`sign_in_count` AS t1_r6, `users`.`current_sign_in_at` AS t1_r7, `users`.`last_sign_in_at` AS t1_r8, `users`.`current_sign_in_ip` AS t1_r9, `users`.`last_sign_in_ip` AS t1_r10, `users`.`confirmation_token` AS t1_r11, `users`.`confirmed_at` AS t1_r12, `users`.`confirmation_sent_at` AS t1_r13, `users`.`unconfirmed_email` AS t1_r14, `users`.`created_at` AS t1_r15, `users`.`updated_at` AS t1_r16, `users`.`username` AS t1_r17 FROM `wine_clubs` LEFT OUTER JOIN `users_wine_clubs` ON `users_wine_clubs`.`wine_club_id` = `wine_clubs`.`id` LEFT OUTER JOIN `users` ON `users`.`id` = `users_wine_clubs`.`user_id` WHERE `users`.`id` = 1[0m
+  Rendered welcome/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 148ms (Views: 143.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/wine_clubs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/wine_clubs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-05 00:46:27 +0200
+
+
+Started GET "/assets/main.self-5e9f2fe600e3b2120270a388464749e87360ad5ae077c7f54213d663dcbbe69a.css?body=1" for ::1 at 2015-08-05 00:46:27 +0200

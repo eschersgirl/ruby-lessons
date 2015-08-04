@@ -43,16 +43,15 @@
 				</tr>
 			</thead>
 			<tbody>
-				<% @usersWineClubs.each do |p| %>
-				<% p.addresses.each do |wineClubs| %>
+				<% @users_wine_clubs.each do |wineclub| %>
 				<tr>
-					<td><%= wineClubs.id %></td>
-					<td><%= wineClubs.name %></td>
+					<td><%= wineclub.id %></td>
+					<td><%= wineclub.text %></td>
 				</tr>
-				<% end %>
 				<% end %>
 			</tbody>
 		</table>
+
 	</td>
 </tr>
 

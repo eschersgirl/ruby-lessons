@@ -13,10 +13,7 @@ class WineClubsController < ApplicationController
     
   def create
     @wine_club = WineClub.new(wine_club_params)
-    # @wine_club.user_id = current_user.id
-    # @wine_club.current_user = current_user
-    # @wine_club = current_user.wine_clubs.build(wine_club_params)
-
+    @wine_club.users << current_user
     @wine_club.save
 
 
